@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Login</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="signup.html" class="button is-primary light-red-button">
+                            <strong>Signup</strong>
+                        </a>
+                        <a href="login.html" class="button is-light">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container pt-6">
+    <div class="columns is-centered">
+        <div class="column is-one-third">
+            <form class="mb-6 box">
+                <p class="title has-text-centered has-text-weight-bold">Login to your Restify account</p>
+
+                <div class="field mb-4">
+                    <label class="label">Username or Email</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Username or Email" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <a href="">Forgot your password?</a>
+                <div class="has-text-centered mt-4">
+                    <button class="button is-danger hero-custom is-fullwidth">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i
+                    class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

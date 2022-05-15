@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | My Restaurant</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+                <a class="navbar-item" href="feed.html">
+                    Feed
+                </a>
+                <a class="navbar-item" href="restaurant.html">
+                    My Restaurant
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <div class="icon-with-badge">
+                            <span class="badge is-danger">1</span>
+                            <i class="far fa-bell navy-blue icon-x-large"></i>
+                        </div>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer">
+                                <i class="fas fa-circle unread"></i>
+                            </span>
+                            Let's get started!
+                        </a>
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer"></span>
+                            Welcome to Restify!
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <figure class="image p-0">
+                            <img class="is-rounded" src="media/profile_pic.jpg">
+                        </figure>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="edit-profile.html" class="navbar-item">
+                            Edit Profile
+                        </a>
+                        <a href="add-restaurant.html" class="navbar-item">
+                            Add Restaurant
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="login.html" class="navbar-item">
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<section class="hero is-primary is-medium hero-image">
+    <div class="hero-body container">
+        <p class="title">
+            Sardi's
+        </p>
+        <p class="subtitle">
+            <i class="fas fa-star rating-star"></i><i class="fas fa-star rating-star"></i><i
+                class="fas fa-star rating-star"></i><i class="fas fa-star rating-star"></i><i
+                class="far fa-star rating-star"></i><br>
+        </p>
+    </div>
+</section>
+<div class="container p-4">
+    <div class="tabs is-centered">
+        <ul class="tabs-menu">
+            <li class="is-active" data-target="about">
+                <a><span>About</span></a>
+            </li>
+            <li data-target="menu">
+                <a><span>Menu</span></a>
+            </li>
+            <li data-target="blog">
+                <a><span>Blog</span></a>
+            </li>
+            <li data-target="comments">
+                <a><span>Comments</span></a>
+            </li>
+            <li data-target="admin">
+                <a><span>Admin</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container p-4">
+    <div class="tab-content" id="about">
+        <div class="columns">
+            <div class="column is-one-third">
+                <img class="about-image" src="media/restaurant01.jpg">
+                <hr>
+                <p>Website: <a href="https://www.sardis.com">www.sardis.com</a></p>
+                <p>Email: <a href="mailto:contact@sardis.com">contact@sardis.com</a></p>
+                <p>Telephone: +1 (212) 221-8440</p>
+                <p>Fax: +1 (123) 456-7891</p>
+            </div>
+            <div class="column">
+                <h1 class="title">About the Restaurant</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <br>
+                <span class="tag is-light">Italian</span>
+                <hr>
+                <h1 class="title">Location & Hours</h1>
+                <div class="columns">
+                    <div class="column">
+                        <table class="table is-fullwidth">
+                            <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td>Closed</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>12-8 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>12-8 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>12-8 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>12-8 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>12-8 p.m.</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="column">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1914908846475!2d-73.9898318842832!3d40.75781284274777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259964a4bf615%3A0xb3a650ee92327418!2sSardi&#39;s!5e0!3m2!1sen!2sca!4v1643989873153!5m2!1sen!2sca"
+                                width="100%" height="300" style="border:0;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                    </div>
+                </div>
+                <hr>
+                <h1 class="title">Images</h1>
+                <div class="columns">
+                    <div class="column">
+                        <img class="py-2" src="media/food01.jpg">
+                        <img class="py-2" src="media/food02.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="py-2" src="media/food03.jpg">
+                        <img class="py-2" src="media/food04.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="menu">
+        <h1 class="title">Appetizers</h1>
+        <p class="left-text underline py-2">
+            Fruitwood Smoked Salmon with Classic Garniture and Multi Grain Bread
+            <span class="right-text">$21.00</span>
+        </p>
+        <p class="left-text underline py-2">
+            Homemade Mozzarella, Vine-Ripened Tomato and Basil with Tuscan Virgin Olive Oil and Aged Balsamic Vinegar
+            <span class="right-text">$19.50</span>
+        </p>
+        <p class="left-text underline py-2">
+            Eighteen Month Aged Parma Prosciutto and Melon
+            <span class="right-text">$20.50</span>
+        </p>
+        <p class="left-text underline py-2">
+            A Salad of Baby Spinach and Warm Bacon Sherry Vinaigrette
+            <span class="right-text">$17.50</span>
+        </p>
+        <p class="left-text underline py-2">
+            California Organic Baby Lettuce with Sherry Vinaigrette
+            <span class="right-text">$14.00</span>
+        </p>
+        <p class="left-text underline py-2">
+            Classic Onion Soup Au Gratin
+            <span class="right-text">$13.00</span>
+        </p>
+        <br>
+        <h1 class="title">Sardi's Traditions</h1>
+        <p class="left-text underline py-2">
+            Shrimp Sardi - Sautéed Jumbo Shrimp in Garlic Sauce
+            <span class="right-text">$35.00</span>
+        </p>
+        <p class="left-text underline py-2">
+            Spinach Cannelloni au Gratin - Spinach and Ricotta Cheese Filling Rolled in a French Crepe with Supreme
+            Sauce
+            <span class="right-text">$27.00</span>
+        </p>
+        <br>
+        <h1 class="title">Sandwiches</h1>
+        <p class="left-text underline py-2">
+            Grilled Angus Burger served with French Fried Potatoes, Tomato, Onion and Pickle
+            <span class="right-text">$24.00</span>
+        </p>
+        <p class="left-text underline py-2">
+            Sardi’s Chicken Club with Lettuce, Tomato, Bacon, Mayonnaise and French Fried Potatoes
+            <span class="right-text">$24.00</span>
+        </p>
+        <br>
+        <h1 class="title">Salads</h1>
+        <p class="left-text underline py-2">
+            Sardi’s Chop Salad: Grilled Chicken Breast, Bistro Ham, Hard Boiled Eggs, Avocado, Boston Lettuce,
+            Asparagus, Fine String Beans, Carrot Ribbons, Tomato, Breakfast Radish and Dijon Mustard Vinaigrette
+            <span class="right-text">$27.50</span>
+        </p>
+        <p class="left-text underline py-2">
+            Caesar Salad
+            <span class="right-text">$16.00</span>
+        </p>
+        <br>
+        <h1 class="title">Main Courses</h1>
+        <p class="left-text underline py-2">
+            Spaghetti al Filetto di Pomodoro
+            <span class="right-text">$21.00</span>
+        </p>
+        <p class="left-text underline py-2">
+            French Lentil Stew with Rosemary Thyme Roasted Mushrooms, Parmesan Polenta, Charred Brussels Sprouts and
+            Cauliflower
+            <span class="right-text">$25.00</span>
+        </p>
+    </div>
+    <div class="tab-content" id="blog">
+        <div class="columns is-centered">
+            <div class="column is-two-fifths">
+                <div class="card mb-4">
+                    <div class="card-content">
+                        <p class="title">
+                            50% off spaghetti bolognese this weekend!
+                        </p>
+                        <p class="subtitle">
+                            John Doe
+                        </p>
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="media/blog_spaghetti.jpg" alt="Spaghetti">
+                            </figure>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken" href="post.html">View Post</a>
+                        <a class="card-footer-item darken"><i class="far fa-thumbs-up navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="fas fa-share navy-blue"></i></a>
+                        </p>
+                    </footer>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-content">
+                        <p class="title">
+                            All you can eat breadsticks next Monday!
+                        </p>
+                        <p class="subtitle">
+                            John Doe
+                        </p>
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="media/blog_breadsticks.jpg" alt="Breadsticks">
+                            </figure>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken" href="post.html">View Post</a>
+                        <a class="card-footer-item darken"><i class="far fa-thumbs-up navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="fas fa-share navy-blue"></i></a>
+                        </p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="comments">
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>Alice</strong> <small>4hrs</small>
+                        <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        <br>
+                        <span><a><i class="far fa-thumbs-up navy-blue"></i></a> 2 <a><i
+                                class="fas fa-reply navy-blue pl-2"></i></a></span>
+                    </p>
+                </div>
+
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-48x48">
+                            <img src="https://bulma.io/images/placeholders/48x48.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Sean Brown</strong> <small>2hrs</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                <br>
+                                <span><a><i class="far fa-thumbs-up navy-blue"></i></a> 1 <a><i
+                                        class="fas fa-reply navy-blue pl-2"></i></a></span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <article class="media">
+            <figure class="media-left">
+                <p class="image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="field">
+                    <p class="control">
+                        <textarea class="textarea"></textarea>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-primary light-red-button">Post comment</button>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="tab-content" id="admin">
+        <div class="columns">
+            <div class="column is-one-fifth">
+                <aside class="menu">
+                    <p class="menu-label">
+                        Blog
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="create-post.html">Create Post</a></li>
+                    </ul>
+                    <p class="menu-label">
+                        Restaurant
+                    </p>
+                    <ul class="menu-list">
+                        <li><a href="edit-restaurant.html">Edit Restaurant</a></li>
+                    </ul>
+                    <ul class="menu-list">
+                        <li><a href="edit-menu.html">Edit Menu</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i
+                    class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+<script src="https://cdn.beats.moe/tabs/tabs.js"></script>
+</body>
+</html>

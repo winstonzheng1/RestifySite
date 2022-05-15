@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Home</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+                <a class="navbar-item" href="feed.html">
+                    Feed
+                </a>
+                <a class="navbar-item" href="restaurant.html">
+                    My Restaurant
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <div class="icon-with-badge">
+                            <span class="badge is-danger">1</span>
+                            <i class="far fa-bell navy-blue icon-x-large"></i>
+                        </div>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer">
+                                <i class="fas fa-circle unread"></i>
+                            </span>
+                            Let's get started!
+                        </a>
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer"></span>
+                            Welcome to Restify!
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <figure class="image p-0">
+                            <img class="is-rounded" src="media/profile_pic.jpg">
+                        </figure>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="edit-profile.html" class="navbar-item">
+                            Edit Profile
+                        </a>
+                        <a href="add-restaurant.html" class="navbar-item">
+                            Add Restaurant
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="login.html" class="navbar-item">
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<section class="hero is-primary hero-custom">
+    <div class="hero-body container">
+        <p class="title">
+            The world of restaurants. All in one place.
+        </p>
+        <div class="field">
+            <p class="control is-expanded has-icons-right">
+                <input class="input is-large is-rounded" type="text" placeholder="Search Restaurants">
+                <span class="icon is-right"><i class="fas fa-search"></i></span>
+            </p>
+        </div>
+    </div>
+</section>
+<div class="container p-4">
+    <div class="columns">
+        <div class="column">
+            <a href="restaurant.html" class="card-link">
+                <div class="card card-result">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/restaurant01.jpg">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Sardi's</p>
+                                <p class="subtitle is-6">New York, NY</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </div>
+                        <div>
+                            <span class="tag is-light">Italian</span>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken"><i class="far fa-bookmark navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="far fa-heart light-red"></i></a>
+                    </footer>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a href="restaurant.html" class="card-link">
+                <div class="card card-result">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/restaurant02.jpg">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Hotel New York</p>
+                                <p class="subtitle is-6">New York, NY</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </div>
+                        <div>
+                            <span class="tag is-light">New American</span>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken"><i class="far fa-bookmark navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="far fa-heart light-red"></i></a>
+                    </footer>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a href="restaurant.html" class="card-link">
+                <div class="card card-result">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/restaurant03.jpg">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Asiate</p>
+                                <p class="subtitle is-6">New York, NY</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </div>
+                        <div>
+                            <span class="tag is-light">Asian</span>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken"><i class="far fa-bookmark navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="far fa-heart light-red"></i></a>
+                    </footer>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a href="restaurant.html" class="card-link">
+                <div class="card card-result">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/restaurant04.jpg">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">The Symposium Restaurant</p>
+                                <p class="subtitle is-6">New York, NY</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </div>
+                        <div>
+                            <span class="tag is-light">Bistro</span>
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <a class="card-footer-item darken"><i class="far fa-bookmark navy-blue"></i></a>
+                        <a class="card-footer-item darken"><i class="far fa-heart light-red"></i></a>
+                    </footer>
+                </div>
+            </a>
+        </div>
+    </div>
+    <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+        <a class="pagination-previous is-disabled">Previous</a>
+        <a class="pagination-next is-disabled">Next</a>
+        <ul class="pagination-list">
+            <li><a class="pagination-link is-current pagination-link-custom" aria-label="Page 1"
+                   aria-current="page">1</a></li>
+        </ul>
+    </nav>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i
+                    class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

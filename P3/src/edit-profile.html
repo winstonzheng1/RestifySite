@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Edit Profile</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+                <a class="navbar-item" href="feed.html">
+                    Feed
+                </a>
+                <a class="navbar-item" href="restaurant.html">
+                    My Restaurant
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <div class="icon-with-badge">
+                            <span class="badge is-danger">1</span>
+                            <i class="far fa-bell navy-blue icon-x-large"></i>
+                        </div>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer">
+                                <i class="fas fa-circle unread"></i>
+                            </span>
+                            Let's get started!
+                        </a>
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer"></span>
+                            Welcome to Restify!
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <figure class="image p-0">
+                            <img class="is-rounded" src="media/profile_pic.jpg">
+                        </figure>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="edit-profile.html" class="navbar-item">
+                            Edit Profile
+                        </a>
+                        <a href="add-restaurant.html" class="navbar-item">
+                            Add Restaurant
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="login.html" class="navbar-item">
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container p-6">
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="pic">
+                <figure class="image is-128x128">
+                    <img class="is-rounded" src="media/profile_pic.jpg">
+                </figure>
+                <div class="file is-small py-2">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="avatar" required>
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <h1 class="is-size-3 has-text-weight-semibold">SampleUsername</h1>
+            <h1 class="is-size-6">Joined February 2022</h1>
+        </div>
+
+        <div class="column">
+            <p class="title">Edit Profile</p>
+            <form>
+                <div class="columns">
+                    <div class="column">
+                        <label class="label">First name</label>
+                        <div class="control pb-4">
+                            <input type="text" class="input" value="Current first name">
+                        </div>
+                        <label class="label">Email address</label>
+                        <div class="control pb-4 has-icons-left">
+                            <input type="email" class="input" value="CurrentEmail@restify.com">
+                            <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        </div>
+                        <label class="label">Password</label>
+                        <div class="control pb-4 has-icons-left">
+                            <input type="password" class="input" value="••••••••" readonly>
+                            <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        </div>
+                        <a href="change-password.html">Change password</a>
+                    </div>
+                    <div class="column">
+                        <label class="label">Last name</label>
+                        <div class="control pb-4">
+                            <input type="text" class="input" value="Current last name">
+                        </div>
+                        <label class="label">Phone number</label>
+                        <div class="control has-icons-left">
+                            <input type="tel" class="input" value="Current phone number">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                        </div>
+                        <div class="has-text-centered" style="padding-top:3rem">
+                            <button class="button is-danger hero-custom is-fullwidth">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="footer mt-6">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook icon"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i class="fab fa-instagram icon"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter icon"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube icon"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

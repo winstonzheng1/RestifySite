@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Post</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+                <a class="navbar-item" href="feed.html">
+                    Feed
+                </a>
+                <a class="navbar-item" href="restaurant.html">
+                    My Restaurant
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <div class="icon-with-badge">
+                            <span class="badge is-danger">1</span>
+                            <i class="far fa-bell navy-blue icon-x-large"></i>
+                        </div>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer">
+                                <i class="fas fa-circle unread"></i>
+                            </span>
+                            Let's get started!
+                        </a>
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer"></span>
+                            Welcome to Restify!
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <figure class="image p-0">
+                            <img class="is-rounded" src="media/profile_pic.jpg">
+                        </figure>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="edit-profile.html" class="navbar-item">
+                            Edit Profile
+                        </a>
+                        <a href="add-restaurant.html" class="navbar-item">
+                            Add Restaurant
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="login.html" class="navbar-item">
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<section class="hero is-info">
+    <div class="hero-body container">
+        <p class="title">
+            Save 20% when you book a group of 4!
+        </p>
+        <p class="subtitle">
+            Jane Smith - <a href="restaurant.html">The Symposium Restaurant</a>
+        </p>
+        <a><i class="far fa-thumbs-up icon-x-large"></i></a> 100 <a><i
+            class="fas fa-share icon-x-large pl-2"></i></a>
+    </div>
+</section>
+<div class="container p-4">
+    <div class="columns is-centered">
+        <div class="column is-three-fifths">
+            <figure class="image is-3by1">
+                <img src="media/blog_friends_eating_wide.jpg" alt="Friends Eating">
+            </figure>
+            <p class="pt-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+            <p class="pt-4">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i
+                    class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Signup</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="signup.html" class="button is-primary light-red-button">
+                            <strong>Signup</strong>
+                        </a>
+                        <a href="login.html" class="button is-light">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container pt-6">
+    <div class="columns is-centered">
+        <div class="column is-one-third">
+            <form class="mb-6 box">
+                <p class="title has-text-centered has-text-weight-bold">Create a Restify account</p>
+                <div class="field">
+                    <label class="label">First name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="First name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Last name</label>
+                    <div class="control">
+                        <input class="input " type="text" placeholder="Last name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Username</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Username" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email address</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="email" placeholder="example@restify.com" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Phone number</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="tel" placeholder="123-456-7890" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="password" placeholder="Password" minlength="8" required>
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                    <p class="help">Minimum of 8 characters</p>
+                </div>
+                <label class="label">Avatar</label>
+                <div class="file is-normal">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="avatar" required>
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <br>
+                <div class="field has-text-centered">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox" required>
+                            I agree to <a href="">Restify's terms & conditions</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="has-text-centered">
+                    <button class="button is-danger hero-custom">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i
+                    class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

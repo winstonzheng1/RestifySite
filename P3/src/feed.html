@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restify | Feed</title>
+    <link rel="icon" href="media/logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-badge@1.0.1/dist/bulma-badge.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.16.8/babel.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Logo -->
+            <a class="navbar-item logo py-0" href="index.html">
+                <img src="media/logo.svg" width="50" height="50">
+            </a>
+            <!-- Hamburger menu, will visit later when JS is allowed -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+               data-target="restifyNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="restifyNavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">
+                    Search
+                </a>
+                <a class="navbar-item" href="feed.html">
+                    Feed
+                </a>
+                <a class="navbar-item" href="restaurant.html">
+                    My Restaurant
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <div class="icon-with-badge">
+                            <span class="badge is-danger">1</span>
+                            <i class="far fa-bell navy-blue icon-x-large"></i>
+                        </div>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer">
+                                <i class="fas fa-circle unread"></i>
+                            </span>
+                            Let's get started!
+                        </a>
+                        <a href="" class="navbar-item">
+                            <span class="unread-spacer"></span>
+                            Welcome to Restify!
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-arrowless">
+                        <figure class="image p-0">
+                            <img class="is-rounded" src="media/profile_pic.jpg">
+                        </figure>
+                    </a>
+                    <div class="navbar-dropdown is-boxed is-right">
+                        <a href="edit-profile.html" class="navbar-item">
+                            Edit Profile
+                        </a>
+                        <a href="add-restaurant.html" class="navbar-item">
+                            Add Restaurant
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="login.html" class="navbar-item">
+                            Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--
+    begin cards
+-->
+<div class="container p-4">
+    <div class="columns is-centered">
+        <div class="column is-two-fifths">
+            <div class="card mb-4">
+                <div class="card-content">
+                    <p class="title">
+                        Save 20% when you book a group of 4!
+                    </p>
+                    <p class="subtitle">
+                        Jane Smith - <a href="restaurant.html">The Symposium Restaurant</a>
+                    </p>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/blog_friends_eating.jpg" alt="Friends Eating">
+                        </figure>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a class="card-footer-item darken" href="post.html">View Post</a>
+                    <a class="card-footer-item darken"><i class="far fa-thumbs-up navy-blue"></i></a>
+                    <a class="card-footer-item darken"><i class="fas fa-share navy-blue"></i></a>
+                    </p>
+                </footer>
+            </div>
+            <div class="card mb-4">
+                <div class="card-content">
+                    <p class="title">
+                        50% off spaghetti bolognese this weekend!
+                    </p>
+                    <p class="subtitle">
+                        John Doe - <a href="restaurant.html">Sardi's</a>
+                    </p>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/blog_spaghetti.jpg" alt="Spaghetti">
+                        </figure>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a class="card-footer-item darken" href="post.html">View Post</a>
+                    <a class="card-footer-item darken"><i class="far fa-thumbs-up navy-blue"></i></a>
+                    <a class="card-footer-item darken"><i class="fas fa-share navy-blue"></i></a>
+                    </p>
+                </footer>
+            </div>
+            <!-- Rest of the cards -->
+            <div class="card mb-4">
+                <div class="card-content">
+                    <p class="title">
+                        All you can eat breadsticks next Monday!
+                    </p>
+                    <p class="subtitle">
+                        John Doe - <a href="restaurant.html">Sardi's</a>
+                    </p>
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="media/blog_breadsticks.jpg" alt="Breadsticks">
+                        </figure>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a class="card-footer-item darken" href="post.html">View Post</a>
+                    <a class="card-footer-item darken"><i class="far fa-thumbs-up navy-blue"></i></a>
+                    <a class="card-footer-item darken"><i class="fas fa-share navy-blue"></i></a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            &copy; 2022 Restify Inc.
+        </p>
+        <p>
+            <a class="px-2" href="https://www.facebook.com/"><i class="fab fa-facebook navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.instagram.com/"><i class="fab fa-instagram navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://twitter.com/"><i class="fab fa-twitter navy-blue icon-x-large"></i></a>
+            <a class="px-2" href="https://www.youtube.com/"><i class="fab fa-youtube navy-blue icon-x-large"></i></a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>
