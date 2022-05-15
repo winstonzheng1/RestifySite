@@ -32,6 +32,7 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
+                    <Route path="/" element={<Home />} />
                     <Route path="home" element={<Home />} />
                     <Route path="signup" element={<Signup />} />
                     <Route path="newrestaurant" element={<NewRestaurant/>}/>
